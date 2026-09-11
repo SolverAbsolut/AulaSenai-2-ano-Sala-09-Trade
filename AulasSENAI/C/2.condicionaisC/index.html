@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    Atividade 1 – Olá, Mundo!
+    #include <stdio.h>
+
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Olá, Mundo!\n");
+    printf("Bem-vindo à programação em C.\n");
+    
+    return 0;
+}
+Justificativa: A função printf é usada para exibir texto na tela. O caractere especial \n é
+ utilizado para quebrar a linha, garantindo que a segunda frase apareça exatamente embaixo da primeira, e não na mesma linha.
+
+ Atividade 2 – Apresentação
+#include &lt;stdio.h&gt;
+
+int main() {
+    char nome[50];
+    int idade;
+
+    printf("Digite seu primeiro nome: ");
+    scanf("%s", nome); 
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Olá, %s! Que legal que você tem %d anos e está aprendendo C.\n", nome, idade);
+    
+    return 0;
+}
+Justificativa: Utilizamos printf para fazer as perguntas na tela e scanf para capturar o que o usuário digita. Para ler uma palavra (string), usamos o formatador %s.
+ Para ler um número inteiro (idade), usamos %d e o operador & antes da variável para indicar o endereço de memória onde o valor será guardado.
+
+ Atividade 3 – Soma
+ #include &lt;stdio.h&gt;
+
+int main() {
+    int num1, num2, soma;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+    
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+    
+    soma = num1 + num2;
+    
+    printf("A soma de %d e %d eh igual a %d\n", num1, num2, soma);
+    
+    return 0;
+}
+Justificativa: Declaramos três variáveis inteiras (int). O programa lê os dois valores e os armazena. Em seguida
+, a operação matemática de soma (+) é feita e o resultado é guardado na variável soma, que depois é inserida no texto final através do %d.
+
+Atividade 4 – Quatro operações
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a, b;
+
+    printf("Digite dois numeros separados por espaco: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Soma: %d\n", a + b);
+    printf("Subtracao: %d\n", a - b);
+    printf("Multiplicacao: %d\n", a * b);
+    
+    if (b != 0) {
+        printf("Divisao inteira: %d\n", a / b);
+    } else {
+        printf("Divisao inteira: Nao e possivel dividir por zero.\n");
+    }
+
+    return 0;
+}
+Justificativa: O programa realiza as quatro operações aritméticas
+ básicas suportadas nativamente pelo C: +, -, * e /. Como as variáveis são inteiras, o operador /
+  faz uma divisão inteira (ignorando os números após a vírgula). Uma condição if foi adicionada para impedir que o programa tente dividir por zero e trave.
+
+  Atividade 5 – Antecessor e sucessor
+  #include &lt;stdio.h&gt;
+
+int main() {
+    int numero;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &numero);
+
+    printf("O antecessor de %d eh %d e o sucessor eh %d.\n", numero, numero - 1, numero + 1);
+
+    return 0;
+}
+Justificativa: O antecessor de um número inteiro é sempre o número menos 1 (numero - 1)
+ e o sucessor é o número mais 1 (numero + 1). O cálculo é feito diretamente dentro do printf, 
+ poupando a necessidade de criar variáveis extras.
+
+ Atividade 6 – Média
+ #include &lt;stdio.h&gt;
+
+int main() {
+    float nota1, nota2, media;
+
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+    
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+
+    media = (nota1 + nota2) / 2.0;
+
+    printf("A media final eh: %.2f\n", media);
+
+    return 0;
+}
+Justificativa: Variáveis do tipo float são usadas para números com casas decimais. Para calcular a média, somamos as
+ notas dentro de parênteses (para forçar a soma a acontecer antes da
+ divisão, regra matemática básica) e dividimos por 2.0. No printf, o %.2f arredonda e limita a exibição a exatamente duas casas decimais.
+
+ Atividade 7 – Celsius para Fahrenheit
+ #include &lt;stdio.h&gt;
+
+int main() {
+    float celsius, fahrenheit;
+
+    printf("Digite a temperatura em Celsius: ");
+    scanf("%f", &celsius);
+
+    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+
+    printf("%.2f graus Celsius equivalem a %.2f graus Fahrenheit.\n", celsius, fahrenheit);
+
+    return 0;
+}
+Justificativa: O programa recebe a temperatura e aplica a fórmula padrão de conversão. Usamos 9.0 e 5.0 (com casas decimais) 
+na fórmula para garantir que a linguagem C trate a divisão como
+ divisão de números reais. Se usássemos apenas 9 e 5, o C poderia fazer uma divisão inteira (9/5 = 1) e arruinar o cálculo.
+
+ Atividade 8 – Área do retângulo
+ #include &lt;stdio.h&gt;
+
+int main() {
+    float base, altura, area;
+
+    printf("Digite o valor da base do retangulo: ");
+    scanf("%f", &base);
+    
+    printf("Digite o valor da altura do retangulo: ");
+    scanf("%f", &altura);
+
+    area = base * altura;
+
+    printf("A area do retangulo eh: %.2f\n", area);
+
+    return 0;
+}
+Justificativa: A área de um retângulo é calculada pela multiplicação de sua base pela
+ sua altura (base * altura). O tipo float foi escolhido para permitir que o usuário digite medidas "quebradas", como 5.5 metros.
+
+ Atividade 9 – Salário
+ #include &lt;stdio.h&gt;
+
+int main() {
+    float valorHora, horasTrabalhadas, salario;
+
+    printf("Digite o valor da sua hora de trabalho: ");
+    scanf("%f", &valorHora);
+    
+    printf("Digite a quantidade de horas trabalhadas: ");
+    scanf("%f", &horasTrabalhadas);
+
+    salario = valorHora * horasTrabalhadas;
+
+    printf("O salario a ser recebido eh: R$ %.2f\n", salario);
+
+    return 0;
+}
+Justificativa: O salário total é simplesmente o produto do valor ganho por hora pela quantidade de horas trabalhadas.
+ Utilizamos float porque tanto valores monetários (R$) quanto horas trabalhadas podem conter frações (ex: 8.5 horas).
+
+Atividade 10 – Calculadora
+ #include &lt;stdio.h&gt;
+
+int main() {
+    int num1, num2;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+    
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    printf("Soma: %d\n", num1 + num2);
+    printf("Subtracao: %d\n", num1 - num2);
+    printf("Multiplicacao: %d\n", num1 * num2);
+
+    if (num2 != 0) {
+        printf("Divisao: %d\n", num1 / num2);
+        printf("Resto da divisao (Modulo): %d\n", num1 % num2);
+    } else {
+        printf("Divisao e Resto: Indisponiveis (divisao por zero).\n");
+    }
+
+    return 0;
+}
+Justificativa: Este código complementa a Atividade 4 ao adicionar o operador módulo (%).
+ Em C, o % retorna o "resto" de uma divisão inteira (por exemplo, 5 dividido por 2 dá 2, e sobra 1; então 5 % 2 = 1).
+
+ Desafio Extra – Ficha do Aluno
+ #include &lt;stdio.h&gt;
+
+int main() {
+    char nome[100];
+    int idade;
+    float nota1, nota2, media;
+
+    printf("Digite o primeiro nome do aluno: ");
+    scanf("%s", nome);
+    
+    printf("Digite a idade do aluno: ");
+    scanf("%d", &idade);
+    
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+    
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+
+    media = (nota1 + nota2) / 2.0;
+
+    printf("\n============================\n");
+    printf("       FICHA DO ALUNO       \n");
+    printf("============================\n");
+    printf("Nome: %s\n", nome);
+    printf("Idade: %d anos\n", idade);
+    printf("Nota 1: %.1f\n", nota1);
+    printf("Nota 2: %.1f\n", nota2);
+    printf("----------------------------\n");
+    printf("MEDIA FINAL: %.2f\n", media);
+    printf("============================\n");
+
+    return 0;
+}
+Justificativa: Este desafio consolida tudo o que foi visto: leitura de strings (texto), inteiros (idade) e números decimais (notas e média).
+ Ao final, em vez de exibir frases soltas, o printf é usado de forma criativa
+ para desenhar linhas e estruturar visualmente os dados, criando uma "ficha" formatada e fácil de ler no terminal.
+ </pre>
+
+</body>
+
+</html>

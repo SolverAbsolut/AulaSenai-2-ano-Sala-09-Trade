@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        /* ==========================================================================
+   EXERCÍCIO 01: Maior de dois números
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float a, b;
+    printf("Digite dois numeros: ");
+    scanf("%f %f", &a, &b);
+
+    if (a > b) {
+        printf("O maior e: %.2f\n", a);
+    } else if (b > a) {
+        printf("O maior e: %.2f\n", b);
+    } else {
+        printf("Os numeros sao iguais.\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 02: Raiz quadrada de positivo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+float raiz_quadrada_ex2(float n) {
+    float x = n, y = 1.0, e = 0.00001;
+    while (x - y > e) {
+        x = (x + y) / 2.0;
+        y = n / x;
+    }
+    return x;
+}
+
+int main() {
+    float num;
+    printf("Digite um numero: ");
+    scanf("%f", &num);
+
+    if (num >= 0) {
+        printf("A raiz quadrada de %.2f e: %.2f\n", num, raiz_quadrada_ex2(num));
+    } else {
+        printf("Numero invalido.\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 03: Raiz de positivo ou quadrado de negativo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+float raiz_quadrada_ex3(float n) {
+    float x = n, y = 1.0, e = 0.00001;
+    while (x - y > e) {
+        x = (x + y) / 2.0;
+        y = n / x;
+    }
+    return x;
+}
+
+int main() {
+    float num;
+    printf("Digite um numero real: ");
+    scanf("%f", &num);
+
+    if (num >= 0) {
+        printf("Raiz quadrada: %.2f\n", raiz_quadrada_ex3(num));
+    } else {
+        printf("Numero ao quadrado: %.2f\n", num * num);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 04: Quadrado e raiz de positivo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+float raiz_quadrada_ex4(float n) {
+    float x = n, y = 1.0, e = 0.00001;
+    while (x - y > e) {
+        x = (x + y) / 2.0;
+        y = n / x;
+    }
+    return x;
+}
+
+int main() {
+    float num;
+    printf("Digite um numero: ");
+    scanf("%f", &num);
+
+    if (num > 0) {
+        printf("Quadrado: %.2f\n", num * num);
+        printf("Raiz quadrada: %.2f\n", raiz_quadrada_ex4(num));
+    } else {
+        printf("O numero nao e positivo.\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 05: Par ou ímpar
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0) {
+        printf("O numero %d e PAR.\n", num);
+    } else {
+        printf("O numero %d e IMPAR.\n", num);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 06: Maior e diferença entre dois inteiros
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b;
+    printf("Digite dois numeros inteiros: ");
+    scanf("%d %d", &a, &b);
+
+    if (a > b) {
+        printf("Maior: %d | Diferenca: %d\n", a, a - b);
+    } else {
+        printf("Maior: %d | Diferenca: %d\n", b, b - a);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 07: Maior número com verificação de igualdade
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float a, b;
+    printf("Digite dois numeros: ");
+    scanf("%f %f", &a, &b);
+
+    if (a == b) {
+        printf("Numeros iguais\n");
+    } else if (a > b) {
+        printf("O maior e: %.2f\n", a);
+    } else {
+        printf("O maior e: %.2f\n", b);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 08: Validação de notas e média
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float n1, n2;
+    printf("Digite duas notas (0.0 a 10.0): ");
+    scanf("%f %f", &n1, &n2);
+
+    if (n1 >= 0.0 && n1 <= 10.0 && n2 >= 0.0 && n2 <= 10.0) {
+        printf("Media: %.2f\n", (n1 + n2) / 2.0);
+    } else {
+        printf("Nota invalida inserida. Programa encerrado.\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 09: Concessão de empréstimo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float salario, prestacao;
+    printf("Digite o salario e o valor da prestacao: ");
+    scanf("%f %f", &salario, &prestacao);
+
+    if (prestacao > salario * 0.20) {
+        printf("Emprestimo nao concedido\n");
+    } else {
+        printf("Emprestimo concedido\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 10: Peso ideal baseado na altura e no sexo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float h, peso_ideal;
+    char sexo;
+
+    printf("Digite a altura (m) e o sexo (M/F): ");
+    scanf("%f %c", &h, &sexo);
+
+    if (sexo == 'M' || sexo == 'm') {
+        peso_ideal = (72.7 * h) - 58;
+        printf("Peso ideal masculino: %.2f kg\n", peso_ideal);
+    } else if (sexo == 'F' || sexo == 'f') {
+        peso_ideal = (62.1 * h) - 44.7;
+        printf("Peso ideal feminino: %.2f kg\n", peso_ideal);
+    } else {
+        printf("Sexo invalido.\n");
+    }
+    return 0;
+}
+
+/* ==========================================================================
+   EXERCÍCIO 11: Soma dos algarismos de um número inteiro positivo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num, soma = 0, temp;
+    printf("Digite um numero inteiro maior que zero: ");
+    scanf("%d", &num);
+
+    if (num <= 0) {
+        printf("Numero invalido\n");
+    } else {
+        temp = num;
+        while (temp > 0) {
+            soma += temp % 10;
+            temp /= 10;
+        }
+        printf("A soma dos algarismos e: %d\n", soma);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 12: Logaritmo natural de um número positivo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    if (num <= 0) {
+        printf("Numero invalido\n");
+    } else {
+        float x = (float)num;
+        float y = (x - 1.0f) / (x + 1.0f);
+        float y2 = y * y;
+        float soma = 0.0f;
+        float termo = y;
+        for (int i = 1; i <= 100; i += 2) {
+            soma += termo / i;
+            termo *= y2;
+        }
+        printf("Logaritmo natural aproximado: %.4f\n", 2.0f * soma);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 13: Média ponderada de 3 provas (pesos 1, 1, 2)
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float n1, n2, n3, media;
+    printf("Digite as 3 notas: ");
+    scanf("%f %f %f", &n1, &n2, &n3);
+
+    media = (n1 * 1 + n2 * 1 + n3 * 2) / 4.0;
+    printf("Media: %.2f - ", media);
+
+    if (media >= 60.0) {
+        printf("APROVADO\n");
+    } else {
+        printf("REPROVADO\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 14: Média ponderada com classificação de notas
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float lab, sem, fin, media;
+    printf("Digite a nota de laboratorio (0-10): ");
+    scanf("%f", &lab);
+    printf("Digite a nota semestral (0-10): ");
+    scanf("%f", &sem);
+    printf("Digite a nota do exame final (0-10): ");
+    scanf("%f", &fin);
+
+    media = (lab * 2 + sem * 3 + fin * 5) / 10.0;
+    printf("Media: %.2f - ", media);
+
+    if (media >= 0.0 && media <= 2.9) {
+        printf("REPROVADO\n");
+    } else if (media >= 3.0 && media <= 4.9) {
+        printf("RECUPERACAO\n");
+    } else {
+        printf("APROVADO\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 15: Dia da semana com switch
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int dia;
+    printf("Digite um numero de 1 a 7: ");
+    scanf("%d", &dia);
+
+    switch (dia) {
+        case 1: printf("Domingo\n"); break;
+        case 2: printf("Segunda-feira\n"); break;
+        case 3: printf("Terca-feira\n"); break;
+        case 4: printf("Quarta-feira\n"); break;
+        case 5: printf("Quinta-feira\n"); break;
+        case 6: printf("Sexta-feira\n"); break;
+        case 7: printf("Sabado\n"); break;
+        default: printf("Dia invalido\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 16: Mês do ano com switch
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int mes;
+    printf("Digite um numero de 1 a 12: ");
+    scanf("%d", &mes);
+
+    switch (mes) {
+        case 1: printf("Janeiro\n"); break;
+        case 2: printf("Fevereiro\n"); break;
+        case 3: printf("Marco\n"); break;
+        case 4: printf("Abril\n"); break;
+        case 5: printf("Maio\n"); break;
+        case 6: printf("Junho\n"); break;
+        case 7: printf("Julho\n"); break;
+        case 8: printf("Agosto\n"); break;
+        case 9: printf("Setembro\n"); break;
+        case 10: printf("Outubro\n"); break;
+        case 11: printf("Novembro\n"); break;
+        case 12: printf("Dezembro\n"); break;
+        default: printf("Mes invalido\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 17: Área de um trapézio
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float b_maior, b_menor, altura, area;
+    printf("Digite a base maior, base menor e a altura: ");
+    scanf("%f %f %f", &b_maior, &b_menor, &altura);
+
+    if (b_maior > 0 && b_menor > 0) {
+        area = ((b_maior + b_menor) * altura) / 2.0;
+        printf("Area do trapezio: %.2f\n", area);
+    } else {
+        printf("As bases devem ser maiores que zero.\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 18: Operações matemáticas básicas
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int opcao;
+    float num1, num2;
+
+    printf("1 - Soma\n2 - Subtracao\n3 - Multiplicacao\n4 - Divisao\nEscolha: ");
+    scanf("%d", &opcao);
+
+    printf("Digite dois numeros: ");
+    scanf("%f %f", &num1, &num2);
+
+    switch (opcao) {
+        case 1: printf("Resultado: %.2f\n", num1 + num2); break;
+        case 2: printf("Resultado: %.2f\n", num1 - num2); break;
+        case 3: printf("Resultado: %.2f\n", num1 * num2); break;
+        case 4: 
+            if (num2 != 0) printf("Resultado: %.2f\n", num1 / num2);
+            else printf("Erro: divisao por zero!\n");
+            break;
+        default: printf("Opcao invalida\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 19: Divisibilidade exclusiva por 3 ou 5
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    int div3 = (num % 3 == 0);
+    int div5 = (num % 5 == 0);
+
+    if ((div3 || div5) && !(div3 && div5)) {
+        printf("O numero e divisivel por 3 ou 5, mas nao por ambos.\n");
+    } else {
+        printf("O numero nao atende a condicao especificada.\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 20: Tipo de triângulo
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float a, b, c;
+    printf("Digite os tres lados do triangulo: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if (a < b + c && b < a + c && c < a + b) {
+        if (a == b && b == c) {
+            printf("Triangulo Equilatero\n");
+        } else if (a == b || b == c || a == c) {
+            printf("Triangulo Isosceles\n");
+        } else {
+            printf("Triangulo Escaleno\n");
+        }
+    } else {
+        printf("Os valores nao formam um triangulo.\n");
+    }
+    return 0;
+}
+
+/* ==========================================================================
+   EXERCÍCIO 21: Menu de opções aritméticas
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int op;
+    float n1, n2;
+
+    printf("1 - Soma\n2 - Diferenca (maior pelo menor)\n3 - Produto\n4 - Divisao\nOpcao: ");
+    scanf("%d", &op);
+
+    printf("Digite dois numeros: ");
+    scanf("%f %f", &n1, &n2);
+
+    switch (op) {
+        case 1: printf("Soma: %.2f\n", n1 + n2); break;
+        case 2: printf("Diferenca: %.2f\n", (n1 > n2) ? (n1 - n2) : (n2 - n1)); break;
+        case 3: printf("Produto: %.2f\n", n1 * n2); break;
+        case 4:
+            if (n2 != 0) printf("Divisao: %.2f\n", n1 / n2);
+            else printf("Erro: denominador nao pode ser zero.\n");
+            break;
+        default: printf("Opcao invalida!\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 22: Condições para aposentadoria
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int idade, tempo;
+    printf("Digite a idade e o tempo de servico: ");
+    scanf("%d %d", &idade, &tempo);
+
+    if (idade >= 65 || tempo >= 30 || (idade >= 60 && tempo >= 25)) {
+        printf("Pode se aposentar\n");
+    } else {
+        printf("Nao pode se aposentar\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 23: Verificação de ano bissexto
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int ano;
+    printf("Digite o ano: ");
+    scanf("%d", &ano);
+
+    if ((ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)) {
+        printf("O ano %d e bissexto.\n", ano);
+    } else {
+        printf("O ano %d nao e bissexto.\n", ano);
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 24: Preço final do produto por estado
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float valor, taxa = 0.0;
+    char est[3];
+
+    printf("Digite o valor do produto: R$ ");
+    scanf("%f", &valor);
+    printf("Digite o estado (MG, SP, RJ, MS): ");
+    scanf("%s", est);
+
+    if (est[0] == 'M' && est[1] == 'G') taxa = 0.07;
+    else if (est[0] == 'S' && est[1] == 'P') taxa = 0.12;
+    else if (est[0] == 'R' && est[1] == 'J') taxa = 0.15;
+    else if (est[0] == 'M' && est[1] == 'S') taxa = 0.08;
+    else {
+        printf("Estado invalido!\n");
+        return 0;
+    }
+
+    printf("Preco final: R$ %.2f\n", valor * (1 + taxa));
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 25: Equação do 2º grau
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+float raiz_quadrada_ex25(float n) {
+    if (n <= 0) return 0;
+    float x = n, y = 1.0, e = 0.00001;
+    while (x - y > e) { x = (x + y) / 2.0; y = n / x; }
+    return x;
+}
+
+int main() {
+    float a, b, c, delta, x1, x2;
+    printf("Digite os coeficientes a, b e c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if (a == 0) {
+        printf("Nao e equacao de segundo grau\n");
+    } else {
+        delta = (b * b) - (4 * a * c);
+        if (delta < 0) {
+            printf("Nao existe raiz\n");
+        } else if (delta == 0) {
+            x1 = -b / (2 * a);
+            printf("Raiz unica: %.2f\n", x1);
+        } else {
+            x1 = (-b + raiz_quadrada_ex25(delta)) / (2 * a);
+            x2 = (-b - raiz_quadrada_ex25(delta)) / (2 * a);
+            printf("Raizes: x1 = %.2f e x2 = %.2f\n", x1, x2);
+        }
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 26: Consumo de combustível
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float dist, litros, consumo;
+    printf("Digite a distancia (km) e o consumo (litros): ");
+    scanf("%f %f", &dist, &litros);
+
+    if (litros <= 0) {
+        printf("Quantidade de litros invalida.\n");
+        return 0;
+    }
+
+    consumo = dist / litros;
+    printf("Consumo: %.2f km/l - ", consumo);
+
+    if (consumo < 8.0) printf("Venda o carro!\n");
+    else if (consumo <= 14.0) printf("Economico!\n");
+    else printf("Super economico!\n");
+
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 27: Categoria de natação por idade
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int idade;
+    printf("Digite a idade do nadador: ");
+    scanf("%d", &idade);
+
+    if (idade >= 5 && idade <= 7) printf("Infantil A\n");
+    else if (idade >= 8 && idade <= 10) printf("Infantil B\n");
+    else if (idade >= 11 && idade <= 13) printf("Juvenil A\n");
+    else if (idade >= 14 && idade <= 17) printf("Juvenil B\n");
+    else if (idade >= 18) printf("Senior\n");
+    else printf("Sem categoria disponivel\n");
+
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 28: Cálculo de diferentes médias
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+float raiz_cubica_ex28(float n) {
+    float x = n;
+    for (int i = 0; i < 100; i++) x = (2.0f * x + n / (x * x)) / 3.0f;
+    return x;
+}
+
+int main() {
+    int x, y, z, op;
+    printf("Digite 3 inteiros positivos: ");
+    scanf("%d %d %d", &x, &y, &z);
+
+    printf("1 - Geometrica\n2 - Ponderada\n3 - Harmonica\n4 - Aritmetica\nOpcao: ");
+    scanf("%d", &op);
+
+    switch (op) {
+        case 1: printf("Geometrica: %.2f\n", raiz_cubica_ex28(x * y * z)); break;
+        case 2: printf("Ponderada: %.2f\n", (x + 2.0*y + 3.0*z) / 6.0); break;
+        case 3: printf("Harmonica: %.2f\n", 1.0 / (1.0/x + 1.0/y + 1.0/z)); break;
+        case 4: printf("Aritmetica: %.2f\n", (x + y + z) / 3.0); break;
+        default: printf("Opcao invalida\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 29: Prova de matemática aleatória
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b, resp, acertos = 0;
+
+    for (int i = 1; i <= 5; i++) {
+        a = (rand() % 100) + 1;
+        b = (rand() % 100) + 1;
+        printf("Pergunta %d: Quanto e %d + %d? ", i, a, b);
+        scanf("%d", &resp);
+
+        if (resp == a + b) {
+            printf("Correto!\n");
+            acertos++;
+        } else {
+            printf("Incorreto. A resposta era: %d\n", a + b);
+        }
+    }
+    printf("\nTotal de acertos: %d de 5\n", acertos);
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 30: Três números em ordem crescente
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float a, b, c, temp;
+    printf("Digite tres numeros: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if (a > b) { temp = a; a = b; b = temp; }
+    if (a > c) { temp = a; a = c; c = temp; }
+    if (b > c) { temp = b; b = c; c = temp; }
+
+    printf("Ordem crescente: %.2f, %.2f, %.2f\n", a, b, c);
+    return 0;
+}
+
+/* ==========================================================================
+   EXERCÍCIO 31: Classificação por Altura e Peso
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float alt, peso;
+    printf("Digite a altura e o peso: ");
+    scanf("%f %f", &alt, &peso);
+
+    if (alt < 1.20) {
+        if (peso <= 60) printf("Classificacao: A\n");
+        else if (peso <= 90) printf("Classificacao: D\n");
+        else printf("Classificacao: G\n");
+    } else if (alt <= 1.70) {
+        if (peso <= 60) printf("Classificacao: B\n");
+        else if (peso <= 90) printf("Classificacao: E\n");
+        else printf("Classificacao: H\n");
+    } else {
+        if (peso <= 60) printf("Classificacao: C\n");
+        else if (peso <= 90) printf("Classificacao: F\n");
+        else printf("Classificacao: I\n");
+    }
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 32: Cardápio de lanchonete
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int cod, qtd;
+    float preco = 0.0;
+
+    printf("Digite o codigo do produto e a quantidade: ");
+    scanf("%d %d", &cod, &qtd);
+
+    switch (cod) {
+        case 100: preco = 1.20; break;
+        case 101: preco = 1.30; break;
+        case 102: preco = 1.50; break;
+        case 103: preco = 1.20; break;
+        case 104: preco = 1.70; break;
+        case 105: preco = 2.20; break;
+        case 106: preco = 1.00; break;
+        default: printf("Codigo invalido\n"); return 0;
+    }
+
+    printf("Valor a pagar: R$ %.2f\n", preco * qtd);
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 33: Reajuste e classificação de preço
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float p_antigo, p_novo, aumento;
+    printf("Digite o preco antigo: R$ ");
+    scanf("%f", &p_antigo);
+
+    if (p_antigo <= 50.0) aumento = 0.05;
+    else if (p_antigo <= 100.0) aumento = 0.10;
+    else aumento = 0.15;
+
+    p_novo = p_antigo * (1 + aumento);
+    printf("Preco novo: R$ %.2f - ", p_novo);
+
+    if (p_novo <= 80.0) printf("Barato\n");
+    else if (p_novo <= 120.0) printf("Normal\n");
+    else if (p_novo <= 200.0) printf("Caro\n");
+    else printf("Muito caro\n");
+
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 34: Conceito do aluno por nota e faltas
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float nota;
+    int faltas;
+    char conceito;
+
+    printf("Digite a nota e o numero de faltas: ");
+    scanf("%f %d", &nota, &faltas);
+
+    if (nota >= 9.0 && nota <= 10.0) conceito = (faltas <= 20) ? 'A' : 'B';
+    else if (nota >= 7.5) conceito = (faltas <= 20) ? 'B' : 'C';
+    else if (nota >= 5.0) conceito = (faltas <= 20) ? 'C' : 'D';
+    else if (nota >= 4.0) conceito = (faltas <= 20) ? 'D' : 'E';
+    else conceito = 'E';
+
+    printf("Conceito: %c\n", conceito);
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 35: Validação de data genérica
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int d, m, a, max_dias;
+    printf("Digite o dia, mes e ano: ");
+    scanf("%d %d %d", &d, &m, &a);
+
+    if (m < 1 || m > 12) {
+        printf("Data invalida\n");
+        return 0;
+    }
+
+    if (m == 2) {
+        int bissexto = ((a % 400 == 0) || (a % 4 == 0 && a % 100 != 0));
+        max_dias = bissexto ? 29 : 28;
+    } else if (m == 4 || m == 6 || m == 9 || m == 11) {
+        max_dias = 30;
+    } else {
+        max_dias = 31;
+    }
+
+    if (d >= 1 && d <= max_dias) printf("Data valida\n");
+    else printf("Data invalida\n");
+
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 36: Comissão de vendas por faixa
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float venda, comissao;
+    printf("Digite o valor da venda mensal: R$ ");
+    scanf("%f", &venda);
+
+    if (venda >= 100000.0) comissao = 700.0 + (venda * 0.16);
+    else if (venda >= 80000.0) comissao = 650.0 + (venda * 0.14);
+    else if (venda >= 60000.0) comissao = 600.0 + (venda * 0.14);
+    else if (venda >= 40000.0) comissao = 550.0 + (venda * 0.14);
+    else if (venda >= 20000.0) comissao = 500.0 + (venda * 0.14);
+    else comissao = 400.0 + (venda * 0.14);
+
+    printf("Comissao: R$ %.2f\n", comissao);
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 37: Cálculo de tarifa de estacionamento
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int h_ent, m_ent, h_sai, m_sai;
+    int min_ent, min_sai, duracao_min, horas;
+    float total = 0.0;
+
+    printf("Digite a hora e minuto de chegada (ex: 12 50): ");
+    scanf("%d %d", &h_ent, &m_ent);
+    printf("Digite a hora e minuto de partida (ex: 14 10): ");
+    scanf("%d %d", &h_sai, &m_sai);
+
+    min_ent = h_ent * 60 + m_ent;
+    min_sai = h_sai * 60 + m_sai;
+
+    if (min_sai < min_ent) min_sai += 24 * 60; // Virada de dia
+
+    duracao_min = min_sai - min_ent;
+    horas = (duracao_min + 59) / 60; // Arredonda qualquer fração para cima
+
+    if (horas <= 2) total = horas * 1.00;
+    else if (horas <= 4) total = 2 * 1.00 + (horas - 2) * 1.40;
+    else total = 2 * 1.00 + 2 * 1.40 + (horas - 4) * 2.00;
+
+    printf("Horas cobradas: %dh | Total a pagar: R$ %.2f\n", horas, total);
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 38: Validação de data de nascimento
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+#define ANO_ATUAL 2008
+
+int main() {
+    int d, m, a, max_dias;
+    printf("Digite o dia, mes e ano de nascimento: ");
+    scanf("%d %d %d", &d, &m, &a);
+
+    if (a > ANO_ATUAL || m < 1 || m > 12) {
+        printf("Data invalida\n");
+        return 0;
+    }
+
+    if (m == 2) {
+        int bissexto = ((a % 400 == 0) || (a % 4 == 0 && a % 100 != 0));
+        max_dias = bissexto ? 29 : 28;
+    } else if (m == 4 || m == 6 || m == 9 || m == 11) {
+        max_dias = 30;
+    } else {
+        max_dias = 31;
+    }
+
+    if (d >= 1 && d <= max_dias) printf("Data valida\n");
+    else printf("Data invalida\n");
+
+    return 0;
+}
+
+
+/* ==========================================================================
+   EXERCÍCIO 39: Reajuste salarial e bônus por tempo de serviço
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float sal, reajuste = 0.0, bonus = 0.0, sal_final;
+    int tempo;
+
+    printf("Digite o salario e o tempo de servico (anos): ");
+    scanf("%f %d", &sal, &tempo);
+
+    if (sal <= 500.0) reajuste = 0.25;
+    else if (sal <= 1000.0) reajuste = 0.20;
+    else if (sal <= 1500.0) reajuste = 0.15;
+    else if (sal <= 2000.0) reajuste = 0.10;
+
+    if (tempo < 1) bonus = 0.0;
+    else if (tempo <= 3) bonus = 100.0;
+    else if (tempo <= 6) bonus = 200.0;
+    else if (tempo <= 10) bonus = 300.0;
+    else bonus = 500.0;
+
+    if (reajuste == 0.0 && bonus == 0.0) {
+        printf("Sem direito a aumento.\n");
+    } else {
+        sal_final = sal * (1 + reajuste) + bonus;
+        printf("Salario reajustado: R$ %.2f\n", sal_final);
+    }
+    return 0;
+}
+
+/* ==========================================================================
+   EXERCÍCIO 40: custos de fabricação e distribuição
+   ========================================================================== */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float custo_fabrica, comissao, impostos, custo_final;
+
+    printf("Digite o custo de fabrica do veiculo: R$ ");
+    if (scanf("%f", &custo_fabrica) != 1) {
+        printf("Entrada invalida.\n");
+        return 1;
+    }
+
+    if (custo_fabrica <= 12000.00) {
+        comissao = custo_fabrica * 0.05;
+        impostos = 0.0;
+    } else if (custo_fabrica <= 25000.00) {
+        comissao = custo_fabrica * 0.10;
+        impostos = custo_fabrica * 0.15;
+    } else {
+        comissao = custo_fabrica * 0.15;
+        impostos = custo_fabrica * 0.20;
+    }
+
+    custo_final = custo_fabrica + comissao + impostos;
+
+    printf("\n--- Resumo do Calculo ---\n");
+    printf("Custo de Fabrica: R$ %.2f\n", custo_fabrica);
+    printf("Comissao Distribuidor: R$ %.2f\n", comissao);
+    printf("Impostos: R$ %.2f\n", impostos);
+    printf("Custo Final ao Consumidor: R$ %.2f\n", custo_final);
+
+    return 0;
+}
+
+/* ==========================================================================
+   EXERCÍCIO 41: Cálculo e Classificação de IMC
+   ========================================================================== */
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float peso, altura, imc;
+
+    printf("Digite o peso em kg (ex: 70.5): ");
+    scanf("%f", &peso);
+
+    printf("Digite a altura em metros (ex: 1.75): ");
+    scanf("%f", &altura);
+
+    if (altura <= 0) {
+        printf("Altura invalida.\n");
+        return 1;
+    }
+
+    imc = peso / (altura * altura);
+
+    printf("\nSeu IMC e: %.2f\n", imc);
+    printf("Classificacao: ");
+
+    if (imc < 18.5) {
+        printf("Abaixo do peso\n");
+    } else if (imc <= 24.9) {
+        printf("Saudavel\n");
+    } else if (imc <= 29.9) {
+        printf("Peso em excesso\n");
+    } else if (imc <= 34.9) {
+        printf("Obesidade Grau I\n");
+    } else if (imc <= 39.9) {
+        printf("Obesidade Grau II (severa)\n");
+    } else {
+        printf("Obesidade Grau III (morbida)\n");
+    }
+
+    return 0;
+}
+    </pre>
+    
+</body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        #include <stdio.h>
+            #include <math.h>
+
+                /* EXERCÍCIO 01: Ler e imprimir um número inteiro */
+                int ex01() {
+                int num;
+                printf("Digite um numero inteiro: ");
+                scanf("%d", &num);
+                printf("Numero digitado: %d\n", num);
+                return 0;
+                }
+
+                /* EXERCÍCIO 02: Ler e imprimir um número real */
+                int ex02() {
+                float num;
+                printf("Digite um numero real: ");
+                scanf("%f", &num);
+                printf("Numero digitado: %.2f\n", num);
+                return 0;
+                }
+
+                /* EXERCÍCIO 03: Soma de três valores inteiros */
+                int ex03() {
+                int v1, v2, v3, soma;
+                printf("Digite tres numeros inteiros: ");
+                scanf("%d %d %d", &v1, &v2, &v3);
+                soma = v1 + v2 + v3;
+                printf("Soma: %d\n", soma);
+                return 0;
+                }
+
+                /* EXERCÍCIO 04: Quadrado de um número real */
+                int ex04() {
+                float num, resultado;
+                printf("Digite um numero real: ");
+                scanf("%f", &num);
+                resultado = num * num;
+                printf("Quadrado do numero: %.2f\n", resultado);
+                return 0;
+                }
+
+                /* EXERCÍCIO 05: Quinta parte de um número real */
+                int ex05() {
+                float num, quinta_parte;
+                printf("Digite um numero real: ");
+                scanf("%f", &num);
+                quinta_parte = num / 5.0f;
+                printf("Quinta parte: %.2f\n", quinta_parte);
+                return 0;
+                }
+
+                /* EXERCÍCIO 06: Celsius para Fahrenheit */
+                int ex06() {
+                float c, f;
+                printf("Digite a temperatura em Celsius: ");
+                scanf("%f", &c);
+                f = c * (9.0f / 5.0f) + 32.0f;
+                printf("Temperatura em Fahrenheit: %.2f\n", f);
+                return 0;
+                }
+
+                /* EXERCÍCIO 07: Fahrenheit para Celsius */
+                int ex07() {
+                float f, c;
+                printf("Digite a temperatura em Fahrenheit: ");
+                scanf("%f", &f);
+                c = 5.0f * (f - 32.0f) / 9.0f;
+                printf("Temperatura em Celsius: %.2f\n", c);
+                return 0;
+                }
+
+                /* EXERCÍCIO 08: Kelvin para Celsius */
+                int ex08() {
+                float k, c;
+                printf("Digite a temperatura em Kelvin: ");
+                scanf("%f", &k);
+                c = k - 273.15f;
+                printf("Temperatura em Celsius: %.2f\n", c);
+                return 0;
+                }
+
+                /* EXERCÍCIO 09: Celsius para Kelvin */
+                int ex09() {
+                float c, k;
+                printf("Digite a temperatura em Celsius: ");
+                scanf("%f", &c);
+                k = c + 273.15f;
+                printf("Temperatura em Kelvin: %.2f\n", k);
+                return 0;
+                }
+
+                /* EXERCÍCIO 10: Conversão de km/h para m/s */
+                int ex10() {
+                float k, m;
+                printf("Digite a velocidade em km/h: ");
+                scanf("%f", &k);
+                m = k / 3.6f;
+                printf("Velocidade em m/s: %.2f\n", m);
+                return 0;
+                }
+
+                /* EXERCÍCIO 11: Conversão de m/s para km/h */
+                int ex11() {
+                float m, k;
+                printf("Digite a velocidade em m/s: ");
+                scanf("%f", &m);
+                k = m * 3.6f;
+                printf("Velocidade em km/h: %.2f\n", k);
+                return 0;
+                }
+
+                /* EXERCÍCIO 12: Conversão de milhas para quilômetros */
+                int ex12() {
+                float m, k;
+                printf("Digite a distancia em milhas: ");
+                scanf("%f", &m);
+                k = 1.61f * m;
+                printf("Distancia em quilometros: %.2f\n", k);
+                return 0;
+                }
+
+                /* EXERCÍCIO 13: Conversão de quilômetros para milhas */
+                int ex13() {
+                float k, m;
+                printf("Digite a distancia em quilometros: ");
+                scanf("%f", &k);
+                m = k / 1.61f;
+                printf("Distancia em milhas: %.2f\n", m);
+                return 0;
+                }
+
+                /* EXERCÍCIO 14: Conversão de graus para radianos */
+                int ex14() {
+                float g, r;
+                const float PI = 3.14f;
+                printf("Digite o angulo em graus: ");
+                scanf("%f", &g);
+                r = g * PI / 180.0f;
+                printf("Angulo em radianos: %.2f\n", r);
+                return 0;
+                }
+
+                /* EXERCÍCIO 15: Conversão de radianos para graus */
+                int ex15() {
+                float r, g;
+                const float PI = 3.14f;
+                printf("Digite o angulo em radianos: ");
+                scanf("%f", &r);
+                g = r * 180.0f / PI;
+                printf("Angulo em graus: %.2f\n", g);
+                return 0;
+                }
+
+                /* EXERCÍCIO 16: Conversão de polegadas para centímetros */
+                int ex16() {
+                float p, c;
+                printf("Digite o comprimento em polegadas: ");
+                scanf("%f", &p);
+                c = p * 2.54f;
+                printf("Comprimento em centimetros: %.2f\n", c);
+                return 0;
+                }
+
+                /* EXERCÍCIO 17: Conversão de centímetros para polegadas */
+                int ex17() {
+                float c, p;
+                printf("Digite o comprimento em centimetros: ");
+                scanf("%f", &c);
+                p = c / 2.54f;
+                printf("Comprimento em polegadas: %.2f\n", p);
+                return 0;
+                }
+
+                /* EXERCÍCIO 18: Conversão de m³ para litros */
+                int ex18() {
+                float m, l;
+                printf("Digite o volume em m3: ");
+                scanf("%f", &m);
+                l = 1000.0f * m;
+                printf("Volume em litros: %.2f\n", l);
+                return 0;
+                }
+
+                /* EXERCÍCIO 19: Conversão de litros para m³ */
+                int ex19() {
+                float l, m;
+                printf("Digite o volume em litros: ");
+                scanf("%f", &l);
+                m = l / 1000.0f;
+                printf("Volume em m3: %.4f\n", m);
+                return 0;
+                }
+
+                /* EXERCÍCIO 20: Conversão de kg para libras */
+                int ex20() {
+                float k, l;
+                printf("Digite a massa em kg: ");
+                scanf("%f", &k);
+                l = k / 0.45f;
+                printf("Massa em libras: %.2f\n", l);
+                return 0;
+                }
+
+                /* EXERCÍCIO 21: Conversão de libras para kg */
+                int ex21() {
+                float l, k;
+                printf("Digite a massa em libras: ");
+                scanf("%f", &l);
+                k = l * 0.45f;
+                printf("Massa em kg: %.2f\n", k);
+                return 0;
+                }
+
+                /* EXERCÍCIO 22: Conversão de jardas para metros */
+                int ex22() {
+                float j, m;
+                printf("Digite o comprimento em jardas: ");
+                scanf("%f", &j);
+                m = 0.91f * j;
+                printf("Comprimento em metros: %.2f\n", m);
+                return 0;
+                }
+
+                /* EXERCÍCIO 23: Conversão de metros para jardas */
+                int ex23() {
+                float m, j;
+                printf("Digite o comprimento em metros: ");
+                scanf("%f", &m);
+                j = m / 0.91f;
+                printf("Comprimento em jardas: %.2f\n", j);
+                return 0;
+                }
+
+                /* EXERCÍCIO 24: Conversão de m² para acres */
+                int ex24() {
+                float m, a;
+                printf("Digite a area em m2: ");
+                scanf("%f", &m);
+                a = m * 0.000247f;
+                printf("Area em acres: %.6f\n", a);
+                return 0;
+                }
+
+                /* EXERCÍCIO 25: Conversão de acres para m² */
+                int ex25() {
+                float a, m;
+                printf("Digite a area em acres: ");
+                scanf("%f", &a);
+                m = a * 4048.58f;
+                printf("Area em m2: %.2f\n", m);
+                return 0;
+                }
+
+                /* EXERCÍCIO 26: Conversão de m² para hectares */
+                int ex26() {
+                float m, h;
+                printf("Digite a area em m2: ");
+                scanf("%f", &m);
+                h = m * 0.0001f;
+                printf("Area em hectares: %.4f\n", h);
+                return 0;
+                }
+
+                /* EXERCÍCIO 27: Conversão de hectares para m² */
+                int ex27() {
+                float h, m;
+                printf("Digite a area em hectares: ");
+                scanf("%f", &h);
+                m = h * 10000.0f;
+                printf("Area em m2: %.2f\n", m);
+                return 0;
+                }
+
+                /* EXERCÍCIO 28: Soma dos quadrados de três valores */
+                int ex28() {
+                float v1, v2, v3, soma;
+                printf("Digite tres valores: ");
+                scanf("%f %f %f", &v1, &v2, &v3);
+                soma = (v1 * v1) + (v2 * v2) + (v3 * v3);
+                printf("Soma dos quadrados: %.2f\n", soma);
+                return 0;
+                }
+
+                /* EXERCÍCIO 29: Média aritmética de quatro notas */
+                int ex29() {
+                float n1, n2, n3, n4, media;
+                printf("Digite as quatro notas: ");
+                scanf("%f %f %f %f", &n1, &n2, &n3, &n4);
+                media = (n1 + n2 + n3 + n4) / 4.0f;
+                printf("Media aritmetica: %.2f\n", media);
+                return 0;
+                }
+
+                /* EXERCÍCIO 30: Conversão de Reais para Dólares */
+                int ex30() {
+                float reais, cotacao, dolares;
+                printf("Digite o valor em reais (R$): ");
+                scanf("%f", &reais);
+                printf("Digite a cotacao do dolar: ");
+                scanf("%f", &cotacao);
+                dolares = reais / cotacao;
+                printf("Valor em dolares ($): %.2f\n", dolares);
+                return 0;
+                }
+
+                /* EXERCÍCIO 31: Antecessor e sucessor de um número inteiro */
+                int ex31() {
+                int num;
+                printf("Digite um numero inteiro: ");
+                scanf("%d", &num);
+                printf("Antecessor: %d | Sucessor: %d\n", num - 1, num + 1);
+                return 0;
+                }
+
+                /* EXERCÍCIO 32: Soma do sucessor do triplo com o antecessor do dobro */
+                int ex32() {
+                int num, resultado;
+                printf("Digite um numero inteiro: ");
+                scanf("%d", &num);
+                resultado = (3 * num + 1) + (2 * num - 1);
+                printf("Resultado: %d\n", resultado);
+                return 0;
+                }
+
+                /* EXERCÍCIO 33: Área de um quadrado */
+                int ex33() {
+                float lado, area;
+                printf("Digite o lado do quadrado: ");
+                scanf("%f", &lado);
+                area = lado * lado;
+                printf("Area do quadrado: %.2f\n", area);
+                return 0;
+                }
+
+                /* EXERCÍCIO 34: Área de um círculo */
+                int ex34() {
+                float raio, area;
+                const float PI = 3.141592f;
+                printf("Digite o raio do circulo: ");
+                scanf("%f", &raio);
+                area = PI * (raio * raio);
+                printf("Area do circulo: %.4f\n", area);
+                return 0;
+                }
+
+                /* EXERCÍCIO 35: Cálculo da hipotenusa */
+                int ex35() {
+                float a, b, hipotenusa;
+                printf("Digite os catetos a e b: ");
+                scanf("%f %f", &a, &b);
+                hipotenusa = sqrtf((a * a) + (b * b));
+                printf("Hipotenusa: %.2f\n", hipotenusa);
+                return 0;
+                }
+
+                /* EXERCÍCIO 36: Volume de um cilindro circular */
+                int ex36() {
+                float altura, raio, volume;
+                const float PI = 3.141592f;
+                printf("Digite a altura e o raio do cilindro: ");
+                scanf("%f %f", &altura, &raio);
+                volume = PI * (raio * raio) * altura;
+                printf("Volume do cilindro: %.4f\n", volume);
+                return 0;
+                }
+
+                /* EXERCÍCIO 37: Valor do produto com desconto de 12% */
+                int ex37() {
+                float valor, valor_desconto;
+                printf("Digite o valor do produto: R$ ");
+                scanf("%f", &valor);
+                valor_desconto = valor * 0.88f;
+                printf("Valor com desconto (12%%): R$ %.2f\n", valor_desconto);
+                return 0;
+                }
+
+                /* EXERCÍCIO 38: Salário com aumento de 25% */
+                int ex38() {
+                float salario, novo_salario;
+                printf("Digite o salario atual: R$ ");
+                scanf("%f", &salario);
+                novo_salario = salario * 1.25f;
+                printf("Novo salario com aumento (25%%): R$ %.2f\n", novo_salario);
+                return 0;
+                }
+
+                /* EXERCÍCIO 39: Divisão de prêmio entre três ganhadores */
+                int ex39() {
+                const float TOTAL = 780000.00f;
+                float g1 = TOTAL * 0.46f;
+                float g2 = TOTAL * 0.32f;
+                float g3 = TOTAL * (1.0f - 0.46f - 0.32f);
+
+                printf("Premio total: R$ %.2f\n", TOTAL);
+                printf("1o Ganhador (46%%): R$ %.2f\n", g1);
+                printf("2o Ganhador (32%%): R$ %.2f\n", g2);
+                printf("3o Ganhador (restante): R$ %.2f\n", g3);
+                return 0;
+                }
+
+                /* EXERCÍCIO 40: Pagamento líquido de um encanador (com 8% IR) */
+                int ex40() {
+                int dias;
+                float quantia_bruta, quantia_liquida;
+                printf("Digite o numero de dias trabalhados: ");
+                scanf("%d", &dias);
+                quantia_bruta = dias * 30.0f;
+                quantia_liquida = quantia_bruta * 0.92f;
+                printf("Quantia liquida a pagar: R$ %.2f\n", quantia_liquida);
+                return 0;
+                }
+
+                /* EXERCÍCIO 41: Valor a pagar por hora trabalhada (+10%) */
+                int ex41() {
+                float valor_hora, horas_trabalhadas, total;
+                printf("Digite o valor da hora (R$) e horas trabalhadas: ");
+                scanf("%f %f", &valor_hora, &horas_trabalhadas);
+                total = (valor_hora * horas_trabalhadas) * 1.10f;
+                printf("Valor final a ser pago (+10%%): R$ %.2f\n", total);
+                return 0;
+                }
+
+                /* EXERCÍCIO 42: Salário-base com gratificação (+5%) e imposto (-7%) */
+                int ex42() {
+                float salario_base, salario_receber;
+                printf("Digite o salario-base: R$ ");
+                scanf("%f", &salario_base);
+                salario_receber = salario_base + (salario_base * 0.05f) - (salario_base * 0.07f);
+                printf("Salario a receber: R$ %.2f\n", salario_receber);
+                return 0;
+                }
+
+                /* EXERCÍCIO 43: Sistema de ajuda para vendedores */
+                int ex43() {
+                float total, total_desconto, parcela, comissao_vista, comissao_parcelada;
+                printf("Digite o valor total da venda: R$ ");
+                scanf("%f", &total);
+
+                total_desconto = total * 0.90f;
+                parcela = total / 3.0f;
+                comissao_vista = total_desconto * 0.05f;
+                comissao_parcelada = total * 0.05f;
+
+                printf("Total a pagar com desconto (10%%): R$ %.2f\n", total_desconto);
+                printf("Valor de cada parcela (3x sem juros): R$ %.2f\n", parcela);
+                printf("Comissao do vendedor (venda a vista): R$ %.2f\n", comissao_vista);
+                printf("Comissao do vendedor (venda parcelada): R$ %.2f\n", comissao_parcelada);
+                return 0;
+                }
+
+                /* EXERCÍCIO 44: Quantidade de degraus para alcançar uma altura */
+                int ex44() {
+                float h_degrau, h_desejada;
+                int degraus;
+                printf("Digite a altura do degrau e a altura a alcançar (em metros): ");
+                scanf("%f %f", &h_degrau, &h_desejada);
+                degraus = (int)ceilf(h_desejada / h_degrau);
+                printf("Degraus necessarios: %d\n", degraus);
+                return 0;
+                }
+
+                /* EXERCÍCIO 45: Converter letra maiúscula para minúscula (ASCII) */
+                int ex45() {
+                char maiuscula, minuscula;
+                printf("Digite uma letra maiuscula: ");
+                scanf(" %c", &maiuscula);
+                minuscula = maiuscula + 32;
+                printf("Letra minuscula: %c\n", minuscula);
+                return 0;
+                }
+
+                /* EXERCÍCIO 46: Inverter número inteiro de 3 dígitos (100 a 999) */
+                int ex46() {
+                int num, d1, d2, d3, num_invertido;
+                printf("Digite um numero inteiro de 3 digitos (100 a 999): ");
+                scanf("%d", &num);
+                d1 = num / 100;
+                d2 = (num / 10) % 10;
+                d3 = num % 10;
+                num_invertido = (d3 * 100) + (d2 * 10) + d1;
+                printf("Numero invertido: %d\n", num_invertido);
+                return 0;
+                }
+
+                /* EXERCÍCIO 47: Imprimir dígitos de número de 4 dígitos (um por linha) */
+                int ex47() {
+                int num, d1, d2, d3, d4;
+                printf("Digite um numero inteiro de 4 digitos (1000 a 9999): ");
+                scanf("%d", &num);
+                d1 = num / 1000;
+                d2 = (num / 100) % 10;
+                d3 = (num / 10) % 10;
+                d4 = num % 10;
+                printf("%d\n%d\n%d\n%d\n", d1, d2, d3, d4);
+                return 0;
+                }
+
+                /* EXERCÍCIO 48: Converter segundos em Horas, Minutos e Segundos */
+                int ex48() {
+                int total_segundos, horas, minutos, segundos;
+                printf("Digite o valor em segundos: ");
+                scanf("%d", &total_segundos);
+
+                horas = total_segundos / 3600;
+                minutos = (total_segundos % 3600) / 60;
+                segundos = total_segundos % 60;
+
+                printf("%dh %dm %ds\n", horas, minutos, segundos);
+                return 0;
+                }
+
+                /* EXERCÍCIO 49: Horário de término de um experimento biológico */
+                int ex49() {
+                int h_inicio, m_inicio, s_inicio, duracao;
+                int total_inicio, total_fim;
+                int h_fim, m_fim, s_fim;
+
+                printf("Digite o horario de inicio (horas minutos segundos): ");
+                scanf("%d %d %d", &h_inicio, &m_inicio, &s_inicio);
+                printf("Digite a duracao da experiencia em segundos: ");
+                scanf("%d", &duracao);
+
+                total_inicio = (h_inicio * 3600) + (m_inicio * 60) + s_inicio;
+                total_fim = total_inicio + duracao;
+
+                h_fim = (total_fim / 3600) % 24;
+                m_fim = (total_fim % 3600) / 60;
+                s_fim = total_fim % 60;
+
+                printf("Horario de termino: %02dh:%02dm:%02ds\n", h_fim, m_fim, s_fim);
+                return 0;
+                }
+
+                /* EXERCÍCIO 50: Calcular ano de nascimento pela idade e ano atual */
+                int ex50() {
+                int idade, ano_atual, ano_nascimento;
+                printf("Digite sua idade e o ano atual: ");
+                scanf("%d %d", &idade, &ano_atual);
+                ano_nascimento = ano_atual - idade;
+                printf("Ano aproximado de nascimento: %d\n", ano_nascimento);
+                return 0;
+                }
+
+                /* EXERCÍCIO 51: Distância de um ponto (x, y) até a origem (0, 0) */
+                int ex51() {
+                float x, y, distancia;
+                printf("Digite as coordenadas x e y do ponto: ");
+                scanf("%f %f", &x, &y);
+                distancia = sqrtf((x * x) + (y * y));
+                printf("Distancia ate a origem (0,0): %.2f\n", distancia);
+                return 0;
+                }
+
+                /* EXERCÍCIO 52: Divisão proporcional de prêmio de loteria */
+                int ex52() {
+                float a1, a2, a3, premio, total_apostado;
+                float p1, p2, p3;
+
+                printf("Digite o valor apostado pelos amigos 1, 2 e 3: ");
+                scanf("%f %f %f", &a1, &a2, &a3);
+                printf("Digite o valor total do premio: R$ ");
+                scanf("%f", &premio);
+
+                total_apostado = a1 + a2 + a3;
+                p1 = premio * (a1 / total_apostado);
+                p2 = premio * (a2 / total_apostado);
+                p3 = premio * (a3 / total_apostado);
+
+                printf("Premio do Amigo 1: R$ %.2f\n", p1);
+                printf("Premio do Amigo 2: R$ %.2f\n", p2);
+                printf("Premio do Amigo 3: R$ %.2f\n", p3);
+                return 0;
+                }
+
+                /* EXERCÍCIO 53: Custo para cercar um terreno com tela */
+                int ex53() {
+                float comprimento, largura, preco_metro, perimetro, custo_total;
+                printf("Digite o comprimento e a largura do terreno (em metros): ");
+                scanf("%f %f", &comprimento, &largura);
+                printf("Digite o preco do metro de tela: R$ ");
+                scanf("%f", &preco_metro);
+
+                perimetro = 2.0f * (comprimento + largura);
+                custo_total = perimetro * preco_metro;
+
+                printf("Custo total para cercar o terreno: R$ %.2f\n", custo_total);
+                return 0;
+                }
+
+                /* FUNÇÃO MAIN */
+                int main() {
+                /* Altere o nome da funcao para executar o exercicio desejado (ex: ex01, ex53) */
+                ex01();
+                return 0;
+                }
+    </pre>
+
+</body>
+
+</html>
